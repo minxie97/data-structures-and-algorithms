@@ -7,10 +7,7 @@ Write a function called addTwo that takes in an array and adds two to every valu
 ------------------------------------------------------------------------------------------------ */
 
 const addTwo = (arr) => {
-  let localArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    localArr.push(arr[i] + 2);
-  }
+  let localArr = arr.map(number => number +2);
   return localArr;
 };
 
@@ -120,10 +117,7 @@ For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 
 
 const getStatName = (arr, minBaseStat) => {
   let newArr = getBaseStatGreaterThan(arr, minBaseStat);
-  let finalArr = [];
-  for (let i = 0; i < newArr.length; i++) {
-    finalArr.push(newArr[i].stat.name);
-  }
+  let finalArr = newArr.map(thing => thing.stat.name);
   return finalArr;
 };
 
