@@ -1,7 +1,0 @@
-# Binary Search of Sorted Array
-* Write a function called binary_search which takes in 2 parameters: a sorted array and the search key. Without utilizing any of the built-in methods available to your language, return the index of the array’s element that is equal to the value of the search key, or -1 if the element is not in the array.
-## Whiteboard 
-* Collaborated with Ed
-![array-binary-search](https://github.com/minxie97/data-structures-and-algorithms/blob/array-binary-search/python/code_challenges/array-binary-search/array-binary-search.png)
-### Approach & Efficiency
-* So binary search neccesarily made this function have a big O of O(log(N)) in terms of time efficiency. The first search is the longest because you are working with the whole array, but each subsequent search goes through an array that is half the size. Our approach was to define an lower and upperbound index. At the beginning this was 0 and len(array) - 1 respectively. We would through and try to match the target to the array at index of midpoint which is the upperbound + lowerbound // 2. If a match is not found, depending on if the target was higher or lower than the midpoint, we would either raise the lowerbound to one above the midpoint or lower the upperbound to one below the midpoint. This effectively cuts the array in half every time. The loop goes again and trys to match the target. Rinse and repeat until the target matches.
