@@ -69,3 +69,128 @@ def test_returning_string():
     ll.insert(4)
     ll.insert(5)
     assert ll.to_string() == "5 -> 4 -> 3 -> 2 -> 1 -> NULL"
+
+def test_append_to_end():
+    ll = LinkedList()
+    ll.insert(1)
+    ll.insert(2)
+    ll.insert(3)
+    ll.insert(4)
+    ll.insert(5)
+    ll.append(0)
+    assert ll.head.value == 5
+    assert ll.to_string() == "5 -> 4 -> 3 -> 2 -> 1 -> 0 -> NULL"
+
+def test_append_to_end_fail():
+    ll = LinkedList()
+    ll.insert(1)
+    ll.insert(2)
+    ll.insert(3)
+    ll.insert(4)
+    ll.insert(5)
+    ll.append(0)
+    assert ll.head.value != 0
+    assert ll.to_string() != "0 -> 5 -> 4 -> 3 -> 2 -> 1 -> NULL"
+
+def test_append_to_empty():
+    ll = LinkedList()
+    ll.append(1)
+    assert ll.head.value == 1
+    assert ll.to_string() == "1 -> NULL"
+
+def test_append_to_empty_fail():
+    ll = LinkedList()
+    ll.append(1)
+    assert ll.head.value != None
+    assert ll.to_string() != "NULL -> 1"
+
+def test_append_multiple():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    ll.append(4)
+    ll.append(5)
+    assert ll.head.value == 1
+    assert ll.to_string() == "1 -> 2 -> 3 -> 4 -> 5 -> NULL"
+
+def test_insert_before_middle():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    ll.insert_before(2, 5)
+    assert ll.to_string() == "1 -> 5 -> 2 -> 3 -> NULL"
+
+def test_insert_before_middle_fail():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    ll.insert_before(2, 5)
+    assert ll.to_string() != "1 -> 2 -> 5 -> 3 -> NULL"
+
+def test_insert_before_first():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    ll.insert_before(1, 5)
+    assert ll.head.value == 5
+    assert ll.to_string() == "5 -> 1 -> 2 -> 3 -> NULL"
+
+def test_insert_before_first_fail():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    ll.insert_before(1, 5)
+    assert ll.head.value != 1
+
+def test_insert_before_no_change():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    ll.insert_before(4, 5)
+    assert ll.to_string() == "1 -> 2 -> 3 -> NULL"
+
+def test_insert_after_middle():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    ll.insert_after(2, 5)
+    assert ll.to_string() == "1 -> 2 -> 5 -> 3 -> NULL"
+
+def test_insert_after_middle_fail():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    ll.insert_after(2, 5)
+    assert ll.to_string() != "1 -> 5 -> 2 -> 3 -> NULL"
+
+def test_insert_after_last():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    ll.insert_after(3, 5)
+    assert ll.to_string() == "1 -> 2 -> 3 -> 5 -> NULL"
+
+def test_insert_after_last_fail():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    ll.insert_after(3, 5)
+    assert ll.to_string() != "1 -> 2 -> 5 -> 3 -> NULL"
+
+def test_insert_after_no_change():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    ll.insert_after(4, 5)
+    assert ll.to_string() == "1 -> 2 -> 3 -> NULL"
