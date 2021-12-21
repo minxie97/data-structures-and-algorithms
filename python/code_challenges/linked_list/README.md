@@ -25,7 +25,7 @@
 * Everything was O(N)
 
 ## Solution
-Code: https://github.com/minxie97/data-structures-and-algorithms/blob/linked-list-insertions/python/code_challenges/linked_list/linked_list.py
-Test: https://github.com/minxie97/data-structures-and-algorithms/blob/linked-list-insertions/python/code_challenges/linked_list/test_linked_list.py
+* Code: https://github.com/minxie97/data-structures-and-algorithms/blob/linked-list-insertions/python/code_challenges/linked_list/linked_list.py
+* Test: https://github.com/minxie97/data-structures-and-algorithms/blob/linked-list-insertions/python/code_challenges/linked_list/test_linked_list.py
 
 Utilize pytest
