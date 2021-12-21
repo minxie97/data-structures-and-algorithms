@@ -23,3 +23,7 @@
 ## Approach & Efficiency
 * The approach was to traverse through the linked list and add a new node based on where the methods defined. Followed examples in class and went with a test-based approach to get working code.
 * Everything was O(N)
+
+## Solution
+Code: https://github.com/minxie97/data-structures-and-algorithms/blob/linked-list-insertions/python/code_challenges/linked_list/linked_list.py
+TesT:
