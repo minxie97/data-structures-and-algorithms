@@ -15,3 +15,17 @@
 * 1. insert method that adds a new node with that value to the head of the list with an O(1) Time performance.
 * 2. includes method that indicates whether that value exists as a Node’s value somewhere within the list.
 * 3. to_string method that returns a string representing all the values in the Linked List
+
+# Insertions
+## Whiteboard
+![Challenge 6 Whiteboard](https://github.com/minxie97/data-structures-and-algorithms/blob/linked-list-insertions/python/code_challenges/linked_list/Code%20Challenge_%2006.jpg)
+
+## Approach & Efficiency
+* The approach was to traverse through the linked list and add a new node based on where the methods defined. Followed examples in class and went with a test-based approach to get working code.
+* Everything was O(N)
+
+## Solution
+* Code: https://github.com/minxie97/data-structures-and-algorithms/blob/linked-list-insertions/python/code_challenges/linked_list/linked_list.py
+* Test: https://github.com/minxie97/data-structures-and-algorithms/blob/linked-list-insertions/python/code_challenges/linked_list/test_linked_list.py
+
+Utilize pytest
