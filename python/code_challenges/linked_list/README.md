@@ -26,4 +26,6 @@
 
 ## Solution
 Code: https://github.com/minxie97/data-structures-and-algorithms/blob/linked-list-insertions/python/code_challenges/linked_list/linked_list.py
-TesT:
+Test: https://github.com/minxie97/data-structures-and-algorithms/blob/linked-list-insertions/python/code_challenges/linked_list/test_linked_list.py
+
+Utilize pytest
