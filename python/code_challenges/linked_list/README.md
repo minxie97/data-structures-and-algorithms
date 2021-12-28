@@ -29,3 +29,16 @@
 * Test: https://github.com/minxie97/data-structures-and-algorithms/blob/linked-list-insertions/python/code_challenges/linked_list/test_linked_list.py
 
 Utilize pytest
+
+# Linked List at Kth
+## Whiteboard
+* Collaborated with Arthur
+![Challenge 7 Whiteboard](https://github.com/minxie97/data-structures-and-algorithms/blob/linked-list-kth/python/code_challenges/linked_list/Code%20Challenge%207.jpg)
+
+## Approach & Efficiency
+* The approach was to first find the length of the entire linked list and then subtract k from that to find the position. We then iterate up to that position and return the value of the node we get to.
+* Everything was O(N)
+
+## Solution
+* Code: https://github.com/minxie97/data-structures-and-algorithms/blob/linked-list-kth/python/code_challenges/linked_list/linked_list.py
+* Test: https://github.com/minxie97/data-structures-and-algorithms/blob/linked-list-kth/python/code_challenges/linked_list/test_linked_list.py

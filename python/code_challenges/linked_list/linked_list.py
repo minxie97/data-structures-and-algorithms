@@ -62,3 +62,19 @@ class LinkedList:
                 current.next = Node(new_value, temp)
                 break
             current = current.next
+
+    def kth_from_end(self, k):
+        current = self.head
+        length = 0
+        while current.next: 
+            current = current.next
+            length += 1
+        if k < 0:
+            return "Please use a position integer"
+        elif k > length:
+            return "Cannot be greater than length of the list!"
+        else: 
+            current = self.head
+            for _ in range(0, length-k):
+                current = current.next
+            return current.value
