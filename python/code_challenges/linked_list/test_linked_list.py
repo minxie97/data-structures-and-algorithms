@@ -194,3 +194,55 @@ def test_insert_after_no_change():
     ll.append(3)
     ll.insert_after(4, 5)
     assert ll.to_string() == "1 -> 2 -> 3 -> NULL"
+
+def test_k_greater_than_length():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    assert ll.kth_from_end(5) == "Cannot be greater than length of the list!"
+
+def test_k_is_negative():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    assert ll.kth_from_end(-1) == "Please use a position integer"
+
+def test_k_equals_length():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    ll.append(4)
+    assert ll.kth_from_end(3) == 1
+    assert ll.kth_from_end(3) != 4
+
+def test_linked_list_equals_length_1():
+    ll = LinkedList()
+    ll.append(1)
+    assert ll.kth_from_end(0) == 1
+    assert ll.kth_from_end(1) == "Cannot be greater than length of the list!"
+
+def test_k_equals_0():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    ll.append(4)
+    assert ll.kth_from_end(0) == 4
+
+def test_k_happy_path():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    ll.append(4)
+    ll.append(5)
+    ll.append(6)
+    ll.append(7)
+    ll.append(8)
+    assert ll.kth_from_end(0) == 8
+    assert ll.kth_from_end(3) == 5
+    assert ll.kth_from_end(6) == 2
+    assert ll.kth_from_end(7) == 1
