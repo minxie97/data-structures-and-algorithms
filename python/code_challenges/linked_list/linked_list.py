@@ -78,3 +78,40 @@ class LinkedList:
             for _ in range(0, length-k):
                 current = current.next
             return current.value
+
+    def ziplists(self, list2):
+            curr1 = self.head
+            curr2 = list2.head
+            while curr1 != None and curr2 != None:
+    
+                    next1 = curr1.next
+                    next2 = curr2.next
+
+                    curr1.next = curr2
+                    if next1 == None:
+                        curr2.next = next2
+                    else:
+                        curr2.next = next1
+
+                    curr1 = next1
+                    curr2 = next2
+
+def ziplists_return_new(list1, list2):
+    ll = LinkedList()
+    curr1 = list1.head
+    curr2 = list2.head
+    
+    while curr1 != None or curr2 != None:
+        if curr1 != None and curr2 != None:
+            ll.append(curr1.value)
+            ll.append(curr2.value)
+            curr1 = curr1.next
+            curr2 = curr2.next
+        elif curr1 == None:
+            ll.append(curr2.value)
+            curr2 = curr2.next
+        elif curr2 == None:
+            ll.append(curr1.value)
+            curr1 = curr1.next
+    
+    return ll

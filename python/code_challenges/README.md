@@ -9,3 +9,5 @@
 * [linked-list](https://github.com/minxie97/data-structures-and-algorithms/blob/linked-list-insertions/python/code_challenges/linked_list/README.md)
 ## Code Challenge 7
 * [linked-list-kth](https://github.com/minxie97/data-structures-and-algorithms/blob/linked-list-kth/python/code_challenges/linked_list/README.md)
+## Code Challenge 8
+* [linked-list-zip](https://github.com/minxie97/data-structures-and-algorithms/blob/linked-list-zip/python/code_challenges/linked_list/README.md)

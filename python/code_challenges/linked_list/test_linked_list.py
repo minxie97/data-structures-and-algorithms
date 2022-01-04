@@ -1,4 +1,4 @@
-from linked_list import Node, LinkedList
+from linked_list import Node, LinkedList, ziplists_return_new
 import pytest
 
 def test_node_instance():
@@ -246,3 +246,86 @@ def test_k_happy_path():
     assert ll.kth_from_end(3) == 5
     assert ll.kth_from_end(6) == 2
     assert ll.kth_from_end(7) == 1
+
+def test_zip_even():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(3)
+    ll.append(5)
+
+    ll2 = LinkedList()
+    ll2.append(2)
+    ll2.append(4)
+    ll2.append(6)
+
+    ll.ziplists(ll2)
+
+    assert ll.to_string() == "1 -> 2 -> 3 -> 4 -> 5 -> 6 -> NULL"
+
+def test_zip_1_longer():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(3)
+    ll.append(5)
+
+    ll2 = LinkedList()
+    ll2.append(2)
+    ll2.append(4)
+
+    ll.ziplists(ll2)
+
+    assert ll.to_string() == "1 -> 2 -> 3 -> 4 -> 5 -> NULL"
+
+def test_zip_2_longer():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(3)
+
+    ll2 = LinkedList()
+    ll2.append(2)
+    ll2.append(4)
+    ll2.append(6)
+
+    ll.ziplists(ll2)
+
+    assert ll.to_string() == "1 -> 2 -> 3 -> 4 -> 6 -> NULL"
+
+def test_zip_list_return_new_even():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(3)
+    ll.append(5)
+
+    ll2 = LinkedList()
+    ll2.append(2)
+    ll2.append(4)
+    ll2.append(6)
+
+    ll3 = ziplists_return_new(ll, ll2)
+    assert ll3.to_string() == "1 -> 2 -> 3 -> 4 -> 5 -> 6 -> NULL"
+
+def test_zip_list_return_new_one_longer():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(3)
+    ll.append(5)
+
+    ll2 = LinkedList()
+    ll2.append(2)
+    ll2.append(4)
+
+    ll3 = ziplists_return_new(ll, ll2)
+    assert ll3.to_string() == "1 -> 2 -> 3 -> 4 -> 5 -> NULL"
+
+def test_zip_list_return_new_two_longer():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(3)
+
+    ll2 = LinkedList()
+    ll2.append(2)
+    ll2.append(4)
+    ll2.append(6)
+
+    ll3 = ziplists_return_new(ll, ll2)
+    assert ll3.to_string() == "1 -> 2 -> 3 -> 4 -> 6 -> NULL"
