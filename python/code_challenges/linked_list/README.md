@@ -44,7 +44,9 @@ Utilize pytest
 * Test: https://github.com/minxie97/data-structures-and-algorithms/blob/linked-list-kth/python/code_challenges/linked_list/test_linked_list.py
 
 # Linked List Zip
+* Collaborated with Ian Cargill
 ## Whiteboard 
+![Challenge 8 Whiteboard](https://github.com/minxie97/data-structures-and-algorithms/blob/linked-list-zip/python/code_challenges/linked_list/Algorithms.jpg)
 
 ## Approach and Efficiency
 * There were two approaches. One is modify a linked list in place and zip a second into that. The other was the create a new zipped list entirely. 
