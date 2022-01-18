@@ -21,6 +21,6 @@
 * For dequeue the complexity of O(1) as it is a simple pop
 
 ## Solution
-[Code]()
-[Tests]()
+* [Code](https://github.com/minxie97/data-structures-and-algorithms/blob/stack-queue-pseudo/python/code_challenges/stack_and_queue/pseudoqueue.py)
+* [Tests]()
 
