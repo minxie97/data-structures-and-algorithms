@@ -11,3 +11,5 @@
 * [linked-list-kth](https://github.com/minxie97/data-structures-and-algorithms/blob/linked-list-kth/python/code_challenges/linked_list/README.md)
 ## Code Challenge 8
 * [linked-list-zip](https://github.com/minxie97/data-structures-and-algorithms/blob/linked-list-zip/python/code_challenges/linked_list/README.md)
+## Code Challenge 11
+* [stack-queue-pseudo](https://github.com/minxie97/data-structures-and-algorithms/blob/stack-queue-pseudo/python/code_challenges/stack_and_queue/README.md)
