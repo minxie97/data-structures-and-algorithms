@@ -22,5 +22,6 @@
 
 ## Solution
 * [Code](https://github.com/minxie97/data-structures-and-algorithms/blob/stack-queue-pseudo/python/code_challenges/stack_and_queue/pseudoqueue.py)
-* [Tests]()
+* [Tests](https://github.com/minxie97/data-structures-and-algorithms/blob/stack-queue-pseudo/python/code_challenges/stack_and_queue/test_stack_and_queue.py)
+
 
