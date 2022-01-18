@@ -1,5 +1,6 @@
 from stack import Stack
 from queue import Queue
+from pseudoqueue import PseudoQueue
 import pytest
 
 def test_push():
@@ -128,3 +129,44 @@ def test_queue_exceptions():
     with pytest.raises(Exception) as peek_empty_queue:
         test.peek()
     assert str(peek_empty_queue.value) == "Cannot peek an empty queue!"
+
+def test_pseudo_empty():
+    test = PseudoQueue()
+    assert test.stack1.is_empty() == True
+    assert test.stack2.is_empty() == True
+
+def test_pseudo_enqueue():
+    test = PseudoQueue()
+    test.enqueue(1)
+    assert test.stack1.top.value == 1
+
+def test_pseudo_enqueue_multi():
+    test = PseudoQueue()
+    test.enqueue(1)
+    test.enqueue(2)
+    test.enqueue(3)
+    assert test.stack1.top.value == 1
+    assert test.stack1.top.value != 2
+    assert test.stack1.top.value != 3
+
+def test_pseudo_dequeue():
+    test = PseudoQueue()
+    test.enqueue(1)
+    assert test.dequeue() == 1
+
+def test_pseudo_dequeue_multi():
+    test = PseudoQueue()
+    test.enqueue(1)
+    test.enqueue(2)
+    test.enqueue(3)
+    assert test.dequeue() == 1
+    assert test.stack1.top.value == 2
+    assert test.dequeue() == 2
+    assert test.stack1.top.value == 3
+
+def test_pseudo_empty_dequeue():
+    test = PseudoQueue()
+    with pytest.raises(Exception) as dequeue_empty:
+        test.dequeue()
+    assert str(dequeue_empty.value) == "The pseudo queue is empty!"
+
