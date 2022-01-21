@@ -1,6 +1,8 @@
 from stack import Stack
 from queue import Queue
 from pseudoqueue import PseudoQueue
+from stack_queue_animal_shelter import Cat, Dog, AnimalShelter
+
 import pytest
 
 def test_push():
@@ -170,3 +172,74 @@ def test_pseudo_empty_dequeue():
         test.dequeue()
     assert str(dequeue_empty.value) == "The pseudo queue is empty!"
 
+def test_animal_shelter_empty():
+    test = AnimalShelter()
+    assert test.pets.is_empty() == True
+    assert test.holding.is_empty() == True
+
+def test_animal_shelter_enqueue():
+    test = AnimalShelter()
+    cat = Cat("Jonesy")
+    test.enqueue(cat)
+    assert test.pets.top.value == cat
+
+def test_animal_shelter_enqueue_multi():
+    test = AnimalShelter()
+    cat = Cat()
+    dog = Dog()
+    test.enqueue(cat)
+    test.enqueue(dog)
+    assert test.pets.top.value == cat
+    assert test.pets.top.next.value == dog
+
+def test_animal_shelter_dequeue():
+    test = AnimalShelter()
+    cat = Cat()
+    test.enqueue(cat)
+    assert test.dequeue("cat") == cat
+
+def test_animal_shelter_dequeue_multi():
+    test = AnimalShelter()
+    jonesy = Cat("Jonesy")
+    neo = Cat("Neo")
+    test.enqueue(jonesy)
+    test.enqueue(neo)
+    assert test.pets.top.value == jonesy
+    assert test.dequeue("cat") == jonesy
+    assert test.pets.top.value == neo
+    assert test.dequeue("cat") == neo
+
+def test_animal_shelter_dequeue_move_dog():
+    test = AnimalShelter()
+    dog = Dog()
+    cat = Cat()
+    test.enqueue(dog)
+    test.enqueue(cat)
+    assert test.pets.top.value == dog
+    assert test.dequeue("cat") == cat
+    assert test.pets.top.value == dog
+
+def test_animal_shelter_dequeue_move_multi_dogs():
+    test = AnimalShelter()
+    dog_one = Dog()
+    dog_two = Dog()
+    cat = Cat()
+    test.enqueue(dog_one)
+    test.enqueue(dog_two)
+    test.enqueue(cat)
+    assert test.pets.top.value == dog_one
+    assert test.pets.top.next.value == dog_two
+    assert test.dequeue("cat") == cat
+    assert test.pets.top.value == dog_one
+    assert test.pets.top.next.value == dog_two
+
+def test_animal_shelter_dequeue_not_cat_or_dog():
+    test = AnimalShelter()
+    dog_one = Dog()
+    dog_two = Dog()
+    cat = Cat()
+    test.enqueue(dog_one)
+    test.enqueue(dog_two)
+    test.enqueue(cat)
+    assert test.pets.top.value == dog_one
+    assert test.dequeue("whoever") == dog_one

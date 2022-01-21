@@ -24,4 +24,17 @@
 * [Code](https://github.com/minxie97/data-structures-and-algorithms/blob/stack-queue-pseudo/python/code_challenges/stack_and_queue/pseudoqueue.py)
 * [Tests](https://github.com/minxie97/data-structures-and-algorithms/blob/stack-queue-pseudo/python/code_challenges/stack_and_queue/test_stack_and_queue.py)
 
+# Animal Shelter
+* First-in, First out Animal Shelter.
+
+## Whiteboard Process
+![Animal Shelter Whiteboard](https://github.com/minxie97/data-structures-and-algorithms/blob/stack-queue-animal-shelter/python/code_challenges/stack_and_queue/stack-queue-animal-shelter.jpg)
+
+## Approach & Efficiency
+* The approach was to utilize the pseudo queue as a basis for the animal shelter. 
+* For enqueue and dequeue the complexity is O(N) as efficiency decreases depending on size of animal shelter
+
+## Solution
+* [Code](https://github.com/minxie97/data-structures-and-algorithms/blob/stack-queue-animal-shelter/python/code_challenges/stack_and_queue/stack_queue_animal_shelter.py)
+* [Tests](https://github.com/minxie97/data-structures-and-algorithms/blob/stack-queue-animal-shelter/python/code_challenges/stack_and_queue/test_stack_and_queue.py)
 
