@@ -25,10 +25,10 @@
 * [Tests](https://github.com/minxie97/data-structures-and-algorithms/blob/stack-queue-pseudo/python/code_challenges/stack_and_queue/test_stack_and_queue.py)
 
 # Animal Shelter
-*bFirst-in, First out Animal Shelter.
+* First-in, First out Animal Shelter.
 
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
+![Animal Shelter Whiteboard](https://github.com/minxie97/data-structures-and-algorithms/blob/stack-queue-animal-shelter/python/code_challenges/stack_and_queue/stack-queue-animal-shelter.jpg)
 
 ## Approach & Efficiency
 * The approach was to utilize the pseudo queue as a basis for the animal shelter. 
