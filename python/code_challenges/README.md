@@ -15,3 +15,5 @@
 * [stack-queue-pseudo](https://github.com/minxie97/data-structures-and-algorithms/blob/stack-queue-pseudo/python/code_challenges/stack_and_queue/README.md)
 ## Code Challenge 12
 * [stack-queue-animal-shelter](https://github.com/minxie97/data-structures-and-algorithms/blob/stack-queue-animal-shelter/python/code_challenges/stack_and_queue/README.md)
+## Code Challenge 13
+* [stack-queue-brackets](https://github.com/minxie97/data-structures-and-algorithms/blob/stack-queue-brackets/python/code_challenges/stack_and_queue/README.md)
