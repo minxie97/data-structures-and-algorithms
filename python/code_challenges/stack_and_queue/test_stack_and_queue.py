@@ -2,6 +2,7 @@ from stack import Stack
 from queue import Queue
 from pseudoqueue import PseudoQueue
 from stack_queue_animal_shelter import Cat, Dog, AnimalShelter
+from stack_queue_brackets import validate_brackets
 
 import pytest
 
@@ -243,3 +244,18 @@ def test_animal_shelter_dequeue_not_cat_or_dog():
     test.enqueue(cat)
     assert test.pets.top.value == dog_one
     assert test.dequeue("whoever") == dog_one
+
+def test_validate_bracket_true():
+    assert validate_brackets("{}") == True
+    assert validate_brackets("{}(){}") == True
+    assert validate_brackets("(){}[[]]") == True
+
+
+def test_validate_bracket_false():
+    assert validate_brackets("[({}]") == False
+    assert validate_brackets("(](") == False
+    assert validate_brackets("{(})") == False
+
+def test_validate_bracket_characters_in_brackets():
+    assert validate_brackets("()[[words!]]") == True
+    assert validate_brackets("{}{Words?}[Words!](())") == True

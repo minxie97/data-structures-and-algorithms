@@ -1,4 +1,3 @@
-from nis import cat
 from stack import Stack
 
 class Cat:
@@ -25,7 +24,7 @@ class AnimalShelter:
             self.pets.push(self.holding.pop())
 
     def dequeue(self, pref):
-        if self.pets != None:
+        if self.pets.top != None:
             while self.pets.top != None:
                 if pref == "cat" or pref == "dog":
                     if self.pets.top.value.type == pref:

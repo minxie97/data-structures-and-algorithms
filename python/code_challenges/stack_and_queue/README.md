@@ -38,3 +38,16 @@
 * [Code](https://github.com/minxie97/data-structures-and-algorithms/blob/stack-queue-animal-shelter/python/code_challenges/stack_and_queue/stack_queue_animal_shelter.py)
 * [Tests](https://github.com/minxie97/data-structures-and-algorithms/blob/stack-queue-animal-shelter/python/code_challenges/stack_and_queue/test_stack_and_queue.py)
 
+# Validate Brackets
+* Multi-bracket Validation.
+
+## Whiteboard Process
+![Validate Brackets Whiteboard](https://github.com/minxie97/data-structures-and-algorithms/blob/stack-queue-brackets/python/code_challenges/stack_and_queue/stack_queue_brackets.jpg)
+
+## Approach & Efficiency
+* The approach was to push opening brackets into a stack and then check if there is a closing bracket that matches what is in the stack. If so, pop that opening out of stack. At the end if the stack is empty return true.
+* The complexity is O(N) because as the string increase, the time(more loops) and space(bigger stack) needed increase. 
+
+## Solution 
+* [Code](https://github.com/minxie97/data-structures-and-algorithms/blob/stack-queue-brackets/python/code_challenges/stack_and_queue/stack_queue_brackets.py)
+* [Tests](https://github.com/minxie97/data-structures-and-algorithms/blob/stack-queue-brackets/python/code_challenges/stack_and_queue/test_stack_and_queue.py)
