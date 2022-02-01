@@ -11,7 +11,6 @@
 N/A
 
 # Tree Max
-# Challenge Summary
 Write a method that finds the maximum value in a binary tree
 
 ## Whiteboard Process
