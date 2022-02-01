@@ -15,10 +15,11 @@ N/A
 Write a method that finds the maximum value in a binary tree
 
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
+![Tree Max Whiteboard](https://github.com/minxie97/data-structures-and-algorithms/blob/tree-max/python/code_challenges/trees/tree_max.jpg)
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+The approach was to use recursion to traverse down both sides of the tree to ultimately find the biggest value on each side. Once it reaches back up to the top, we compare which value is bigger and return that value
+Time complexity is O(N^2) and that depends on how deep the tree goes. Space is O(1).
 
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
