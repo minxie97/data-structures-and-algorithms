@@ -22,4 +22,5 @@ The approach was to use recursion to traverse down both sides of the tree to ult
 Time complexity is O(N^2) and that depends on how deep the tree goes. Space is O(1).
 
 ## Solution
-<!-- Show how to run your code, and examples of it in action -->
+* [code](https://github.com/minxie97/data-structures-and-algorithms/blob/tree-max/python/code_challenges/trees/binary_tree.py)
+* [tests] (https://github.com/minxie97/data-structures-and-algorithms/blob/tree-max/python/code_challenges/trees/test_tree.py)
