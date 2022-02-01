@@ -23,4 +23,4 @@ Time complexity is O(N^2) and that depends on how deep the tree goes. Space is O
 
 ## Solution
 * [code](https://github.com/minxie97/data-structures-and-algorithms/blob/tree-max/python/code_challenges/trees/binary_tree.py)
-* [tests] (https://github.com/minxie97/data-structures-and-algorithms/blob/tree-max/python/code_challenges/trees/test_tree.py)
+* [tests] (https://github.com/minxie97/data-structures-and-algorithms/blob/tree-max/python/code_challenges/trees/test_trees.py)
