@@ -75,6 +75,48 @@ def test_contains_method():
     assert bts.contains(5) == True
     assert bts.contains(10) == False
 
+def test_find_max_sample():
+    bt = BinaryTree(2)
+    bt.root.left = Node(3)
+    bt.root.left.left = Node(7)
+    bt.root.left.right = Node(5)
+    bt.root.right = Node(4)
+    bt.root.right.left = Node(1)
+    bt.root.right.right = Node(9)
+
+    assert bt.tree_max() == 9
+    assert bt.tree_max() != 2
+
+def test_find_max_unilateral_right():
+    bt = BinaryTree(1)
+    bts = BinarySearchTree(bt)
+    bts.add(2)
+    bts.add(3)
+    bts.add(4)
+    bts.add(5)
+    bts.add(6)
+    bts.add(7)
+    assert bt.tree_max() == 7
+    assert bt.tree_max() != 1
+
+def test_find_max_unilateral_left():
+    bt = BinaryTree(7)
+    bts = BinarySearchTree(bt)
+    bts.add(6)
+    bts.add(5)
+    bts.add(4)
+    bts.add(3)
+    bts.add(2)
+    bts.add(1)
+    assert bt.tree_max() == 7
+    assert bt.tree_max() != 1
+
+def test_find_max_empty_tree():
+    bt = BinaryTree()
+    with pytest.raises(Exception) as max_empty:
+        bt.tree_max()
+    assert str(max_empty.value) == "The tree is empty!"
+
 @pytest.fixture
 def sample_tree():
     bt = BinaryTree("A")

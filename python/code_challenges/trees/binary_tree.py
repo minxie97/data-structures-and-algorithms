@@ -55,6 +55,26 @@ class BinaryTree:
             walk(self.root)
             return values
 
+    def tree_max(self):
+        def walk(root, max_value):
+            if root is None:
+                return max_value
+            elif root.value > max_value:
+                max_value = root.value
+            max_left = walk(root.left, max_value)
+            max_right = walk(root.right, max_value)
+            if max_left > max_value:
+                max_value = max_left      
+            if max_right > max_value:
+                max_value = max_right
+
+            return max_value
+        
+        if self.root is None:
+            raise(Exception("The tree is empty!"))
+        else:
+            return walk(self.root, self.root.value)
+
 class BinarySearchTree(BinaryTree):
 
     def __init__(self, tree):
