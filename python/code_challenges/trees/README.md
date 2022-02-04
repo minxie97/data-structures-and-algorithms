@@ -35,5 +35,5 @@ The approach was to utilize two lists, where one is a "queue" and the other is t
 Big O is O(N) for both time and space. Time is dependent on how many nodes are on the tree, as well as space. 
 
 ## Solution
-* [code](https://github.com/minxie97/data-structures-and-algorithms/blob/tree-breadth-first/python/code_challenges/trees/binary_tree.py)
+* [code](https://github.com/minxie97/data-structures-and-algorithms/blob/tree-breadth-first/python/code_challenges/trees/tree_breadth_first.py)
 * [tests](https://github.com/minxie97/data-structures-and-algorithms/blob/tree-breadth-first/python/code_challenges/trees/test_trees.py)
