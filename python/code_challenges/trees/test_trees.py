@@ -1,5 +1,6 @@
 from binary_tree import BinaryTree, BinarySearchTree
 from tree_breadth_first import breadth_first
+from tree_fizz_buzz import KNode, KTree, tree_fizz_buzz
 from node import Node
 
 import pytest
@@ -130,6 +131,19 @@ def test_breadth_first_empty():
         breadth_first(bt)
     assert str(breadth_first_empty.value) == "The tree is empty!"
 
+def test_fizz_buzz_empty():
+    kt = KTree()
+    with pytest.raises(Exception) as fizz_buzz_empty:
+        tree_fizz_buzz(kt)
+    assert str(fizz_buzz_empty.value) == "The tree is empty!"
+
+def test_kary_breadth_first(sample_k_tree):
+    assert sample_k_tree.breadth_first() == [1, 3, 6, 9, 5, 10, 20, 30, 60, 90]
+
+def test_fizz_buzz(sample_k_tree):
+    new_tree = tree_fizz_buzz(sample_k_tree)
+    assert new_tree.breadth_first() == ["1", "Fizz", "Fizz", "Fizz", "Buzz", "Buzz", "Buzz", "FizzBuzz", "FizzBuzz", "FizzBuzz"]
+
 @pytest.fixture
 def sample_tree():
     bt = BinaryTree("A")
@@ -140,3 +154,12 @@ def sample_tree():
     bt.root.right.left = Node("F")
 
     return bt
+
+@pytest.fixture
+def sample_k_tree():
+    kt = KTree(KNode(1))
+    kt.root.children = [KNode(3), KNode(6), KNode(9)]
+    kt.root.children[0].children = [KNode(5), KNode(10), KNode(20)]
+    kt.root.children[1].children = [KNode(30), KNode(60), KNode(90)]
+
+    return kt
