@@ -1,4 +1,5 @@
 from binary_tree import BinaryTree, BinarySearchTree
+from tree_breadth_first import breadth_first
 from node import Node
 
 import pytest
@@ -116,6 +117,18 @@ def test_find_max_empty_tree():
     with pytest.raises(Exception) as max_empty:
         bt.tree_max()
     assert str(max_empty.value) == "The tree is empty!"
+
+def test_breadth_first(sample_tree):
+    assert breadth_first(sample_tree) == ["A", "B", "C", "D", "E", "F"]
+    assert breadth_first(sample_tree) != ["A", "B", "D", "E", "C", "F"]
+    assert breadth_first(sample_tree) != ["D", "B", "E", "A", "F", "C"]
+    assert breadth_first(sample_tree) != ["D", "E", "B", "F", "C", "A"]
+
+def test_breadth_first_empty():
+    bt = BinaryTree()
+    with pytest.raises(Exception) as breadth_first_empty:
+        breadth_first(bt)
+    assert str(breadth_first_empty.value) == "The tree is empty!"
 
 @pytest.fixture
 def sample_tree():

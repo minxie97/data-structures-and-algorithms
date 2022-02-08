@@ -19,3 +19,5 @@
 * [stack-queue-brackets](https://github.com/minxie97/data-structures-and-algorithms/blob/stack-queue-brackets/python/code_challenges/stack_and_queue/README.md)
 ## Code Challenge 16
 * [tree-max](https://github.com/minxie97/data-structures-and-algorithms/blob/tree-max/python/code_challenges/trees/README.md)
+## Code Challenge 17
+* [tree-breadth-first](https://github.com/minxie97/data-structures-and-algorithms/blob/tree-breadth-first/python/code_challenges/trees/README.md)
