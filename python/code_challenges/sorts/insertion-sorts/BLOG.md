@@ -1,5 +1,8 @@
 # Insertion Sort
 
+* Code: https://github.com/minxie97/data-structures-and-algorithms/blob/insertion-sort/python/code_challenges/sorts/insertion-sorts/insertion_sort.py
+* Tests: https://github.com/minxie97/data-structures-and-algorithms/blob/insertion-sort/python/code_challenges/sorts/insertion-sorts/test_insertion_sort.py
+
 ## Pseudocode
 ```
   InsertionSort(int[] arr)
