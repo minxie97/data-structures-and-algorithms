@@ -33,7 +33,7 @@ starting state: `[8,4,23,42,16,15]`
 
 ending state: `[4,8,23,42,16,15]`
 
-!(step1)['step1.JPG']
+![step1](https://github.com/minxie97/data-structures-and-algorithms/blob/insertion-sort/python/code_challenges/sorts/insertion-sorts/step1.JPG)
 
 ### Step 2
 starting state: `[4,8,23,42,16,15]`
@@ -47,7 +47,7 @@ starting state: `[4,8,23,42,16,15]`
 
 ending state: `[4,8,23,42,16,15]`
 
-!(step2)['step2.JPG']
+![step2](https://github.com/minxie97/data-structures-and-algorithms/blob/insertion-sort/python/code_challenges/sorts/insertion-sorts/step2.JPG)
 
 ### Step 3
 starting state: `[4,8,23,42,16,15]`
@@ -61,7 +61,7 @@ starting state: `[4,8,23,42,16,15]`
 
 ending state: `[4,8,23,42,16,15]`
 
-!(step3)['step3.JPG']
+![step3](https://github.com/minxie97/data-structures-and-algorithms/blob/insertion-sort/python/code_challenges/sorts/insertion-sorts/step3.JPG)
 
 ### Step 4
 starting state: `[4,8,23,42,16,15]`
@@ -81,7 +81,7 @@ starting state: `[4,8,23,42,16,15]`
 
 ending state: `[4,8,16,23,42,15]`
 
-!(step4)['step4.JPG']
+![step4](https://github.com/minxie97/data-structures-and-algorithms/blob/insertion-sort/python/code_challenges/sorts/insertion-sorts/step4.JPG)
 
 ### Step 5
 starting state: `[4,8,16,23,42,15]`
@@ -104,7 +104,7 @@ starting state: `[4,8,16,23,42,15]`
 
 ending state: `[4,8,15,16,23,42]`
 
-!(step5)['step5.JPG']
+![step5](https://github.com/minxie97/data-structures-and-algorithms/blob/insertion-sort/python/code_challenges/sorts/insertion-sorts/step5.JPG)
 
 ## Efficiency
 
