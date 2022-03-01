@@ -1,5 +1,5 @@
 from binary_tree import BinaryTree, BinarySearchTree
-from tree_breadth_first import breadth_first
+from tree_breadth_first import breadth_first, breadth_first_reverse
 from tree_fizz_buzz import KNode, KTree, tree_fizz_buzz
 from node import Node
 
@@ -143,6 +143,10 @@ def test_kary_breadth_first(sample_k_tree):
 def test_fizz_buzz(sample_k_tree):
     new_tree = tree_fizz_buzz(sample_k_tree)
     assert new_tree.breadth_first() == ["1", "Fizz", "Fizz", "Fizz", "Buzz", "Buzz", "Buzz", "FizzBuzz", "FizzBuzz", "FizzBuzz"]
+
+def test_breadth_first_not_reversed(sample_tree):
+    assert breadth_first(sample_tree) == ["A", "B", "C", "D", "E", "F"]
+    
 
 @pytest.fixture
 def sample_tree():
