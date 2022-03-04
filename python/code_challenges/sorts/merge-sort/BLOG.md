@@ -214,3 +214,4 @@ sample array: [8, 4, 23, 42, 16, 15]
 end state: [4, 8, 15, 16, 23, 42]
 
 ## Visual
+![merge-sort visual](https://github.com/minxie97/data-structures-and-algorithms/blob/merge-sort/python/code_challenges/sorts/merge-sort/merge-sort.jpeg)
