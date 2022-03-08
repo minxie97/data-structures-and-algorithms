@@ -107,3 +107,5 @@ right = end of array = 5
 
 final: [4, 8, 15, 16, 23, 42]
 
+## Visual
+![visual](https://github.com/minxie97/data-structures-and-algorithms/blob/quick-sort/python/code_challenges/sorts/quick-sort/quick_sort.JPG)
