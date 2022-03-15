@@ -40,7 +40,7 @@ class HashTable:
                 
 
     def contains(self, key):
-        return self.get(key) != None
+        return key in self.allkeys
 
     def keys(self):
         return list(self.allkeys)
