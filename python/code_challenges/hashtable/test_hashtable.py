@@ -49,6 +49,13 @@ def test_hash_range():
     index = test.hash("a;lsdfjfbnlk;asjfks;dlnvaskjasl;odfcipqjoasdgj09qw uopjpjfjs")
     assert 0 <= index <= 1023
 
+def test_same_key():
+    test = HashTable()
+    test.set("test", 1)
+    assert test.get("test") == 1
+    test.set("test", 2)
+    assert test.get("test") == 2
+
 def test_empty_repeated_word():
     assert hashmap_repeated_word("No repeated words") == None
 

@@ -11,8 +11,8 @@ class HashTable:
         self.allkeys = set()
 
     def set(self, key, value):
+        index = self.hash(key)
         if key not in self.allkeys:
-            index = self.hash(key)
             if self.table[index] is None:
                 self.table[index] = Node(key, value)
             else:
@@ -21,8 +21,12 @@ class HashTable:
                     node = node.next
                 node.next = Node(key, value)
             self.allkeys.add(key)
-        else:
-            return
+        elif key in self.allkeys:
+            node = self.table[index]
+            while node:
+                if node.key == key:
+                    node.value = value
+                node = node.next
     
     def get(self, key):
         if key not in self.allkeys:
@@ -30,15 +34,11 @@ class HashTable:
         else:
             index = self.hash(key)
             node = self.table[index]
-            if node.key == key:
-                return node.value
-            else:
-                while node.next:
-                    node = node.next
-                    if node.key == key:
-                        return node.value
+            while node:
+                if node.key == key:
+                    return node.value
+                node = node.next
                 
-
     def contains(self, key):
         return key in self.allkeys
 
