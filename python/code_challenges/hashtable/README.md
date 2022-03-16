@@ -25,3 +25,37 @@ Collisions were handled by implementing a linked list for keys that have the sam
 * hash
     * Arguments: key
     * Returns: Index in the collection for that key
+
+# Hash Map Repeated Word
+* [Code](https://github.com/minxie97/data-structures-and-algorithms/blob/hashmap-repeated-word/python/code_challenges/hashtable/hashmap_repeated_word.py)
+* [Test](https://github.com/minxie97/data-structures-and-algorithms/blob/hashmap-repeated-word/python/code_challenges/hashtable/test_hashtable.py)
+## Whiteboard
+![repeated-word-whiteboard](https://github.com/minxie97/data-structures-and-algorithms/blob/hashmap-repeated-word/python/code_challenges/hashtable/hashmap_repeated_word.jpg)
+## Approach and efficiency
+The approach was to use a hashtable as a sort of word bank. All we needed to do was to go through the given string and check the words against a word bank. If the word isn't in the bank, then we add it to the bank. If it was in the bank, then upon the very first time we get a match, we return the match.
+
+Time complexity this is a O(N) the loop within the function iterates more as the string is longer.
+
+Space complexity this is also O(N). The hashtable word bank can continually grow if the string a very long and a match isn't quickly found.
+
+## Solution
+```
+from hashtable import HashTable
+import re
+
+def hashmap_repeated_word(string):
+    curr_word = ""
+    word_bank = HashTable()
+    for char in string.lower():
+        if re.search(r"[a-z]", char):
+            curr_word += char
+        elif len(curr_word):
+            if word_bank.contains(curr_word):
+                return curr_word
+            else:
+                word_bank.set(curr_word, None)
+                curr_word = ""
+    if len(curr_word) and word_bank.contains(curr_word):
+        return curr_word
+    return None
+```
