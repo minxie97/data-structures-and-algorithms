@@ -27,9 +27,10 @@ Collisions were handled by implementing a linked list for keys that have the sam
     * Returns: Index in the collection for that key
 
 # Hash Map Repeated Word
-
+* [Code](https://github.com/minxie97/data-structures-and-algorithms/blob/hashmap-repeated-word/python/code_challenges/hashtable/hashmap_repeated_word.py)
+* [Test](https://github.com/minxie97/data-structures-and-algorithms/blob/hashmap-repeated-word/python/code_challenges/hashtable/test_hashtable.py)
 ## Whiteboard
-
+![repeated-word-whiteboard](https://github.com/minxie97/data-structures-and-algorithms/blob/hashmap-repeated-word/python/code_challenges/hashtable/hashmap_repeated_word.jpg)
 ## Approach and efficiency
 The approach was to use a hashtable as a sort of word bank. All we needed to do was to go through the given string and check the words against a word bank. If the word isn't in the bank, then we add it to the bank. If it was in the bank, then upon the very first time we get a match, we return the match.
 

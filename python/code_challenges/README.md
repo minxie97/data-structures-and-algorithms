@@ -23,4 +23,5 @@
 * [tree-breadth-first](https://github.com/minxie97/data-structures-and-algorithms/blob/tree-breadth-first/python/code_challenges/trees/README.md)
 ## Code Challenge 18
 * [tree-fizz-buzz](https://github.com/minxie97/data-structures-and-algorithms/blob/tree-fizz-buzz/python/code_challenges/trees/README.md)
-
+## Code Challenge 31
+* [hashmap-repeated-word](https://github.com/minxie97/data-structures-and-algorithms/blob/hashmap-repeated-word/python/code_challenges/hashtable/README.md)
