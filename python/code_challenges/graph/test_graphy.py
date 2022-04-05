@@ -80,3 +80,34 @@ def test_empty_graph():
     assert test.get_nodes() == []
     assert test.size() == 0
     assert test.get_neighbor() == None
+
+def test_breadth_first():
+    test = Graph()
+    node1 = test.add_node("A")
+    node2 = test.add_node("B")
+    node3 = test.add_node("C")
+    node4 = test.add_node("D")
+    node5 = test.add_node("E")
+    test.add_edge(node1, node2)
+    test.add_edge(node1, node3)
+    test.add_edge(node2, node3)
+    test.add_edge(node2, node4)
+    test.add_edge(node3, node4)
+    test.add_edge(node4, node5)
+    assert test.breadth_first(node1) == ["A", "B", "C", "D", "E"]
+
+def test_breadth_first_disconnected_vertex():
+    test = Graph()
+    node1 = test.add_node("A")
+    node2 = test.add_node("B")
+    node3 = test.add_node("C")
+    node4 = test.add_node("D")
+    test.add_edge(node2, node3)
+    test.add_edge(node2, node4)
+    test.add_edge(node3, node4)
+    assert test.breadth_first(node1) == ["A"]
+
+def test_breadth_one_node():
+    test = Graph()
+    node1 = test.add_node("A")
+    assert test.breadth_first(node1) == ["A"]
