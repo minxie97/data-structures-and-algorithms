@@ -38,11 +38,29 @@ My approach was really to understand the concept of graphs given to us from the 
 write a method that takes a Node as an argument and returns a collection of nodes in the order that they were visited.
 
 ## Whiteboard Process
-
+![breadth-first](https://github.com/minxie97/data-structures-and-algorithms/blob/graph-breadth-first/python/code_challenges/graph/graph_breadth_first.jpg)
 
 ## Approach & Efficiency
 My approach was to utilize a set and queue to figure out which nodes I have visited in the traversal and the order of that traversal. Everytime I reach a node that I have not visited before, I would add it to the set and then enqeue it in the queue. I then add what is deqeued to the return list, ensuring the order. Then I check the dequeued node for its neighbors and check the set if those neighbors have been visited and if not add to the set and enqueue it. Repeat until I go through the whole list.
 
 ## Solution
+```
+def breadth_first(self, node=None):
+    nodes = []
+    queue = []
+    visited = set()
 
+    queue.append(node)
+    visited.add(node)
 
+    while len(queue) > 0:
+        front = queue.pop(0)
+        nodes.append(front.value)
+
+        for i in self.get_neighbor(front):
+            if i.vertex not in visited:
+                visited.add(i.vertex)
+                queue.append(i.vertex)
+
+    return nodes
+```
