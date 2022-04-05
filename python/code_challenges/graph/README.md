@@ -64,3 +64,4 @@ def breadth_first(self, node=None):
 
     return nodes
 ```
+[tests](https://github.com/minxie97/data-structures-and-algorithms/blob/graph-breadth-first/python/code_challenges/graph/test_graphy.py)
