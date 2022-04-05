@@ -33,3 +33,16 @@ My approach was really to understand the concept of graphs given to us from the 
 * size
   * Arguments: none
   * Returns the total number of nodes in the graph
+
+# Graph Breadth First
+write a method that takes a Node as an argument and returns a collection of nodes in the order that they were visited.
+
+## Whiteboard Process
+
+
+## Approach & Efficiency
+My approach was to utilize a set and queue to figure out which nodes I have visited in the traversal and the order of that traversal. Everytime I reach a node that I have not visited before, I would add it to the set and then enqeue it in the queue. I then add what is deqeued to the return list, ensuring the order. Then I check the dequeued node for its neighbors and check the set if those neighbors have been visited and if not add to the set and enqueue it. Repeat until I go through the whole list.
+
+## Solution
+
+
