@@ -38,3 +38,25 @@ class Graph:
 
     def size(self):
         return len(self.adjacency_list.keys())
+
+    def breadth_first(self, node=None):
+        nodes = []
+        queue = []
+        visited = set()
+
+        queue.append(node)
+        visited.add(node)
+
+        while len(queue) > 0:
+            front = queue.pop(0)
+            nodes.append(front.value)
+
+            for i in self.get_neighbor(front):
+                if i.vertex not in visited:
+                    visited.add(i.vertex)
+                    queue.append(i.vertex)
+
+        return nodes
+
+
+        
