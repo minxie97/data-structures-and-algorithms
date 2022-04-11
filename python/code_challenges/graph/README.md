@@ -65,3 +65,35 @@ def breadth_first(self, node=None):
     return nodes
 ```
 [tests](https://github.com/minxie97/data-structures-and-algorithms/blob/graph-breadth-first/python/code_challenges/graph/test_graphy.py)
+
+# Graph Business Trip
+Write a function called business_trip that takes in a graph and array of city names. Determine whether the trip is possible between those cities with direct flights, and how much it would cost.
+
+Return cost if the trip is possible, None if not.
+
+## Whiteboard Process
+![business-trip](https://github.com/minxie97/data-structures-and-algorithms/blob/graph-business-trip/python/code_challenges/graph/graph_business_trip.jpg)
+
+## Approach & Efficiency
+My approach was to essentially loop through the graph to see if a vertex exists for the departure city and if so check if the arrival city is a direct neighbor of that departure node. If so, that means a direct flight is possible and the cost is added to the return variable.
+
+## Solution
+```
+def business_trip(graph, cities):
+    cost = 0
+    for i in range(len(cities) - 1):
+        for vertex in graph.get_nodes():
+            if vertex.value == cities[i]:
+                depart_node = vertex
+                break
+        else:
+            return None
+        for neighbor in graph.get_neighbor(depart_node):
+            if neighbor.vertex.value == cities[i + 1]:
+                cost += neighbor.weight
+                break
+        else:
+            return None
+    return cost
+```
+[tests](https://github.com/minxie97/data-structures-and-algorithms/blob/graph-business-trip/python/code_challenges/graph/test_graphy.py)
