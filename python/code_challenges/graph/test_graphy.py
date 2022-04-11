@@ -1,5 +1,6 @@
 import pytest
 from graph import Graph
+from graph_business_trip import business_trip
 
 def test_add_node():
     test = Graph()
@@ -111,3 +112,83 @@ def test_breadth_one_node():
     test = Graph()
     node1 = test.add_node("A")
     assert test.breadth_first(node1) == ["A"]
+
+def test_business_trip_two_vertex():
+    test = Graph()
+    node1 = test.add_node("A")
+    node2 = test.add_node("B")
+    node3 = test.add_node("C")
+    node4 = test.add_node("D")
+    node5 = test.add_node("E")
+    test.add_edge(node1, node2, 1)
+    test.add_edge(node1, node3, 2)
+    test.add_edge(node2, node3, 3)
+    test.add_edge(node2, node4, 4)
+    test.add_edge(node3, node4, 5)
+    test.add_edge(node4, node5, 6)
+    path = ["A", "C"]
+    assert business_trip(test, path) == 2
+
+def test_business_trip_three():
+    test = Graph()
+    node1 = test.add_node("A")
+    node2 = test.add_node("B")
+    node3 = test.add_node("C")
+    node4 = test.add_node("D")
+    node5 = test.add_node("E")
+    test.add_edge(node1, node2, 1)
+    test.add_edge(node1, node3, 2)
+    test.add_edge(node2, node3, 3)
+    test.add_edge(node2, node4, 4)
+    test.add_edge(node3, node4, 5)
+    test.add_edge(node4, node5, 6)
+    path = ["A", "B", "C"]
+    assert business_trip(test, path) == 4
+
+def test_business_trip_fail_two_vertex():
+    test = Graph()
+    node1 = test.add_node("A")
+    node2 = test.add_node("B")
+    node3 = test.add_node("C")
+    node4 = test.add_node("D")
+    node5 = test.add_node("E")
+    test.add_edge(node1, node2, 1)
+    test.add_edge(node1, node3, 2)
+    test.add_edge(node2, node3, 3)
+    test.add_edge(node2, node4, 4)
+    test.add_edge(node3, node4, 5)
+    test.add_edge(node4, node5, 6)
+    path = ["A", "D"]
+    assert business_trip(test, path) == None
+
+def test_business_trip_fail_three_vertex():
+    test = Graph()
+    node1 = test.add_node("A")
+    node2 = test.add_node("B")
+    node3 = test.add_node("C")
+    node4 = test.add_node("D")
+    node5 = test.add_node("E")
+    test.add_edge(node1, node2, 1)
+    test.add_edge(node1, node3, 2)
+    test.add_edge(node2, node3, 3)
+    test.add_edge(node2, node4, 4)
+    test.add_edge(node3, node4, 5)
+    test.add_edge(node4, node5, 6)
+    path = ["A", "B", "E"]
+    assert business_trip(test, path) == None
+
+def test_nonexistent_vertex():
+    test = Graph()
+    node1 = test.add_node("A")
+    node2 = test.add_node("B")
+    node3 = test.add_node("C")
+    node4 = test.add_node("D")
+    node5 = test.add_node("E")
+    test.add_edge(node1, node2, 1)
+    test.add_edge(node1, node3, 2)
+    test.add_edge(node2, node3, 3)
+    test.add_edge(node2, node4, 4)
+    test.add_edge(node3, node4, 5)
+    test.add_edge(node4, node5, 6)
+    path = ["F", "A"]
+    assert business_trip(test, path) == None
