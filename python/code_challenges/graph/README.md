@@ -102,6 +102,7 @@ def business_trip(graph, cities):
 write a method that takes a Node as an argument and returns a collection of nodes in pre-order depth-first order.
 
 ## Whiteboard Process
+![depth-first](https://github.com/minxie97/data-structures-and-algorithms/blob/graph-depth-first/python/code_challenges/graph/graph_depth_first.jpg)
 
 ## Approach and efficiency
 Depth first traversal is very similar to breadth first except for a few tweaks. We use a stack rather than a queue and we reverse the list of childrens so that we are able to add the first child to the stack last (accessed first).
@@ -130,3 +131,4 @@ def depth_first(self, node=None):
 
     return nodes
 ```
+[tests](https://github.com/minxie97/data-structures-and-algorithms/blob/graph-depth-first/python/code_challenges/graph/test_graphy.py)
