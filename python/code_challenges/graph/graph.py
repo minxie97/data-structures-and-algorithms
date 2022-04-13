@@ -58,5 +58,24 @@ class Graph:
 
         return nodes
 
+    def depth_first(self, node=None):
 
-        
+        if node is None: return []
+
+        nodes = []
+        stack = []
+        visited = set()
+
+        stack.append(node)
+        visited.add(node)
+
+        while stack:
+            top = stack.pop()
+            nodes.append(top.value)
+
+            for i in reversed(self.get_neighbor(top)):
+                if i.vertex not in visited:
+                    visited.add(i.vertex)
+                    stack.append(i.vertex)
+
+        return nodes
